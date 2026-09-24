@@ -16,4 +16,3 @@ jobs:
         with:
           output_file: "diagram.svg"
           excluded_paths: "dist,node_modules,.codesight,.husky"
-          file_colors: '{"js": "red", "ts": "green"}'
