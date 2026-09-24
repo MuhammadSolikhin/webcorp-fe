@@ -1,0 +1,65 @@
+// Primary: Tosca
+$primaryColor: (
+  "80": #003238,
+  "60": #00424a,
+  "50": #036a80,
+  "20": #99babe,
+  "10": #ccdddf,
+);
+
+// Secondary: Orange
+$secondaryColor: (
+  "10": #ffe0cc,
+  "50": #cf5a27,
+  "60": #cf5a27,
+);
+
+// Third: Blue
+$thirdColor: (
+  "50": #006699,
+);
+
+// Fourth: Green
+$fourthColor: (
+  "80": #00894d,
+  "60": #00b766,
+  "10": #ccfae6,
+);
+
+// Warning: Yellow
+$warningColor: (
+  "20": #ffe999,
+);
+
+// Neutral: Black
+$neutralColor: (
+  "10": #171919,
+  "09": #515252,
+  "06": #a7a8a8,
+  "03": #efefef,
+  "02": #f6f6f6,
+  "01": #ffffff,
+);
+
+$colors: (
+  "primary": $primaryColor,
+  "secondary": $secondaryColor,
+  "third": $thirdColor,
+  "fourth": $fourthColor,
+  "warning": $warningColor,
+  "neutral": $neutralColor,
+);
+
+@each $colorName, $color in $colors {
+  @each $colorCode, $colorValue in $color {
+    .table-#{$colorName}--#{$colorCode} {
+      tr {
+        background-color: $colorValue;
+      }
+    }
+
+    .alert-#{$colorName}--#{$colorCode} {
+      background-color: $colorValue;
+    }
+  }
+}

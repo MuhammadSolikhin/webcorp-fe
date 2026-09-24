@@ -1,0 +1,56 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "./color-v2.scss";
+
+$custom-colors: (
+  "third": $third,
+);
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+$sm: 540px;
+$md: 720px;
+$lg: 960px;
+$xl: 1140px;
+$xxl: 1400px;
+
+$container-max-widths: (
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,
+);
+
+$carousel-control-color: $light;
+$carousel-control-width: 15%;
+$carousel-control-opacity: 0.9;
+$carousel-control-hover-opacity: 1;
+
+$carousel-indicator-active-bg: $light;
+$carousel-indicator-active-opacity: 1;
+
+$carousel-transition-duration: 0.5s;
+$carousel-transition: transform $carousel-transition-duration ease-in-out;
+$btn-font-weight: 700;
+$btn-border-radius: 100px;

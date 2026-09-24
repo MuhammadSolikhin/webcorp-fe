@@ -1,0 +1,10 @@
+@Library('HiBankLibrary')_
+
+ProdPipeline([
+    "dockerfilePath":"Dockerfile",
+    "imageSrc": "asia-southeast2-docker.pkg.dev/webcorporate-dev-uat/webcorporate-dev-uat-registry/fe-webcorp-uat",
+    "imageDst":"asia-southeast2-docker.pkg.dev/webcorporate-prod/webcorporate-prod/fe-webcorp-prod",
+    "secretDst":"infra-management-prod-devops-sa",
+    "makeArgs":"jenkins-build-prod",
+    "yamlUrl": "https://github.corp.hibank.co.id/cloud-infra/webcorp-devops-template/blob/master/prod/deploy-fe.yaml"
+])

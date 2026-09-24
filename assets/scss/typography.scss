@@ -1,0 +1,51 @@
+// title
+
+.title-xl {
+  font-size: clamp(28px, 4vw, 64px);
+  font-weight: 700;
+  line-height: 42px;
+  @media screen and (min-width: $md) {
+    line-height: 150%;
+  }
+}
+.title-lg {
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 700;
+  line-height: 42px;
+  @media screen and (min-width: $md) {
+    line-height: 150%;
+  }
+}
+.title-md {
+  font-size: clamp(21px, 3vw, 40px);
+  font-weight: 700;
+}
+.title-sm {
+  font-size: clamp(18px, 3vw, 36px);
+  font-weight: 700;
+}
+.title-es {
+  font-size: clamp(16px, 3vw, 28px);
+  font-weight: 700;
+}
+// text
+.text-xl {
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 24px);
+}
+.text-lg {
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 21px);
+}
+.text-md-extend {
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 18px);
+}
+.text-md {
+  font-weight: 500;
+  font-size: clamp(12px, 2vw, 16px);
+}
+.text-sm {
+  font-weight: 500;
+  font-size: clamp(12px, 2vw, 14px);
+}

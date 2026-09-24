@@ -1,0 +1,21 @@
+.swiper-pagination {
+  position: relative;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+  margin-top: 15px;
+}
+
+.swiper-pagination-bullet {
+  margin-right: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: map-get($secondaryColor, "50");
+}
+
+.swiper-slide {
+  display: flex;
+  height: auto;
+}

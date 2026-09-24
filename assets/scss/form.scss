@@ -1,0 +1,64 @@
+/*
+  Docs: https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors
+*/
+
+// Input
+input,
+select,
+textarea {
+  border-width: 1px;
+  border-color: map-get($primaryColor, "20");
+  border-radius: 0.25rem;
+}
+
+select.form-control[size],
+select.form-control[multiple] {
+  height: calc(1.5em + 0.75rem + 2px);
+}
+
+.form-control[readonly] {
+  background-color: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: map-get($primaryColor, "20");
+}
+
+// Select
+.theme-select {
+  border: none;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0; /* "0 0 2em" reads as margin-top: 0; margin-left: 0; margin-right: 0; margin-bottom: 2em; (32px) */
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+// Modal
+.theme-modal {
+  .modal-content {
+    background-color: map-get($neutralColor, "02");
+    border-radius: 15px;
+    border: 0;
+  }
+
+  .modal-body {
+    padding-top: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+
+  header {
+    padding-bottom: 0;
+    border: 0;
+  }
+}

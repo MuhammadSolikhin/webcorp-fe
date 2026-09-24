@@ -1,0 +1,78 @@
+.tag {
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-white {
+  background: #fff;
+  color: $dark;
+}
+.tag-primary {
+  background: $primary;
+  color: $light;
+}
+.tag-secondary {
+  background: $secondary;
+  color: $light;
+}
+.tag-third {
+  background: $third;
+  color: $light;
+}
+.tag-danger {
+  background: $danger;
+  color: $light;
+}
+.tag-success {
+  background: $success;
+  color: $light;
+}
+.tag-info {
+  background: $info;
+  color: $light;
+}
+.tag-warning {
+  background: $warning;
+  color: $dark;
+}
+
+// tag ghost
+.tag-ghost-white {
+  background: #fff;
+  color: $light;
+}
+.tag-ghost-primary {
+  background: #e9f7fa;
+  color: #005466;
+}
+.tag-ghost-secondary {
+  background: #faeee9;
+  color: #a6471a;
+}
+.tag-ghost-third {
+  background: #e7faf2;
+  color: #0a7d4d;
+}
+.tag-ghost-danger {
+  background: #ed3151;
+  color: #fdeaee;
+}
+.tag-ghost-success {
+  background: #f1f8e7;
+  color: #74b50c;
+}
+.tag-ghost-info {
+  background: #e6f3f7;
+  color: #018cb2;
+}
+.tag-ghost-warning {
+  background: #fffbea;
+  color: $dark;
+}

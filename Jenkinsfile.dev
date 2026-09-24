@@ -1,0 +1,10 @@
+@Library('HiBankLibrary')_
+
+DevPipelineDebug([
+    "dockerfilePath":"Dockerfile.dev",
+    "imageName":"asia-southeast2-docker.pkg.dev/webcorporate-dev-uat/webcorporate-dev-uat-registry/fe-webcorp-dev",
+    "secretName":"infra-management-prod-devops-sa",
+    "makeArgs":"NUXT_PUBLIC_ASSET_URL=${params.NUXT_PUBLIC_ASSET_URL} NUXT_PUBLIC_API_URL=${params.NUXT_PUBLIC_API_URL} NUXT_PUBLIC_RECAPTCHA=${params.NUXT_PUBLIC_RECAPTCHA} NUXT_PUBLIC_GA_ID=${params.NUXT_PUBLIC_GA_ID} NUXT_PUBLIC_CDN_URL=${params.NUXT_PUBLIC_CDN_URL} jenkins-build-dev",
+    "synopsysSecret": "SYNOPSYS_TOKEN_WEBCORP",
+    "yamlUrl": "https://github.corp.hibank.co.id/cloud-infra/webcorp-devops-template/blob/master/dev/deploy-fe.yaml"
+])

@@ -1,0 +1,124 @@
+/*
+  Docs: https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors
+*/
+
+// Global
+$tableBorderRadius: 15px;
+
+.alert {
+  border-radius: $tableBorderRadius;
+  display: inline-block;
+}
+
+.table td {
+  border: 0px;
+}
+
+.theme-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  margin-bottom: 0px;
+
+  // Responsive table on tab to mobile view
+  @media screen and (max-width: 576px) {
+    overflow-x: auto;
+    display: block;
+    width: 100%;
+  }
+
+  thead th {
+    border-bottom: 0;
+  }
+
+  tr {
+    border-radius: $tableBorderRadius;
+
+    td,
+    th {
+      padding-right: 25px;
+      padding-left: 25px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    td:first-child,
+    th:first-child {
+      border-top-left-radius: $tableBorderRadius;
+      border-bottom-left-radius: $tableBorderRadius;
+      -moz-border-top-left-radius: $tableBorderRadius;
+      -moz-border-bottom-left-radius: $tableBorderRadius;
+      -webkit-border-top-left-radius: $tableBorderRadius;
+      -webkit-border-bottom-left-radius: $tableBorderRadius;
+    }
+
+    td:last-child,
+    th:last-child {
+      border-top-right-radius: $tableBorderRadius;
+      border-bottom-right-radius: $tableBorderRadius;
+      -moz-border-top-right-radius: $tableBorderRadius;
+      -moz-border-bottom-right-radius: $tableBorderRadius;
+      -webkit-border-top-right-radius: $tableBorderRadius;
+      -webkit-border-bottom-right-radius: $tableBorderRadius;
+    }
+  }
+}
+
+.table-default {
+  tr {
+    background-color: map-get($neutralColor, "01");
+  }
+}
+
+// Primary
+.table-primary-default {
+  thead {
+    tr {
+      background-color: map-get($primaryColor, "80");
+      color: map-get($neutralColor, "01");
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: map-get($primaryColor, "10");
+    }
+  }
+}
+
+.table-primary-striped {
+  thead {
+    tr {
+      background-color: map-get($primaryColor, "80");
+      color: map-get($neutralColor, "01");
+    }
+  }
+
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: map-get($primaryColor, "10");
+    }
+    tr:nth-of-type(even) {
+      background-color: map-get($neutralColor, "01");
+    }
+  }
+}
+
+// Secondary
+.table-secondary-striped {
+  thead {
+    tr {
+      background-color: map-get($secondaryColor, "50");
+      color: map-get($neutralColor, "01");
+    }
+  }
+
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: map-get($secondaryColor, "10") !important;
+    }
+    tr:nth-of-type(even) {
+      background-color: map-get($neutralColor, "01") !important;
+    }
+  }
+}

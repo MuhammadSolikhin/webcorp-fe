@@ -1,0 +1,11 @@
+@Library('HiBankLibrary')_
+
+UatPipeline([
+    "dockerfilePath":"Dockerfile",
+    "imageName":"asia-southeast2-docker.pkg.dev/webcorporate-dev-uat/webcorporate-dev-uat-registry/fe-webcorp-uat",
+    "imageNameAWS" :"116546229120.dkr.ecr.ap-southeast-3.amazonaws.com/webcorp/uat/fe-webcorp",
+    "secretName":"infra-management-prod-devops-sa",
+    "makeArgs":"jenkins-build-uat",
+    "synopsysSecret": "SYNOPSYS_TOKEN_WEBCORP",
+    "yamlUrl": "https://github.corp.hibank.co.id/cloud-infra/webcorp-devops-template/blob/master/aws/uat/deployment/fe-webcorp.yaml"
+])

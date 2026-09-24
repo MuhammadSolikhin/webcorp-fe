@@ -1,0 +1,246 @@
+/*
+  Docs: https://vue-loader.vuejs.org/guide/scoped-css.html#deep-selectors
+*/
+@import "./theme.scss";
+$small: 300px;
+$medium: 900px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html {
+  // 14 (set 14px on mobile) / 16 (browser default 16px) * 100
+  font-size: 87.5%; // 14px
+  @media (min-width: $md) {
+    font-size: 100%; // 16px
+  }
+  @media (min-width: $xxl) {
+    font-size: 112.5%; // 18px
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+  &.hold-transition {
+    *,
+    *::before,
+    *::after {
+      transition: none !important;
+    }
+  }
+}
+
+input,
+button,
+select,
+optgroup,
+textarea,
+body {
+  font-size: 1rem;
+  font-family: "Open Sans", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif !important;
+}
+
+#__nuxt {
+  height: 100%;
+}
+
+.latest-update {
+  font-size: 0.7rem;
+  color: map-get($thirdColor, "50");
+  display: block;
+}
+.primary-color {
+  color: map-get($primaryColor, "50");
+}
+
+.secondary-color {
+  color: map-get($secondaryColor, "50");
+}
+
+// Link
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.link-to {
+  cursor: pointer;
+  color: map-get($neutralColor, "10");
+  text-decoration: none;
+}
+
+.link-to:hover {
+  color: map-get($secondaryColor, "50");
+}
+
+// Limit Text
+.limit-lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+// Icon
+.currency-flag {
+  width: 25px;
+}
+
+// Text font : Open Sans
+.font-family-title {
+  font-family: "Open Sans", sans-serif;
+}
+
+// underline using empty container
+.under-line {
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  content: "";
+  height: 1px;
+  width: 0%;
+  background: map-get($secondaryColor, "50");
+  transition: all 300ms ease-out;
+}
+
+// underline using pseudo element
+.underlined-text {
+  width: fit-content;
+  position: relative;
+  padding: 0;
+  &::after {
+    display: block;
+    position: absolute;
+    bottom: -8px;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: map-get($secondaryColor, "50");
+    transition: all 300ms ease-out;
+  }
+}
+
+#app-container {
+  position: relative;
+}
+
+.container {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 95%;
+  @media screen and (min-width: $lg) {
+    width: 92%;
+  }
+  @media screen and (min-width: $xxl) {
+    width: 90%;
+  }
+}
+.btn {
+  border: none;
+}
+@import "./buttons.scss";
+@import "./typography.scss";
+@import "./tags.scss";
+
+.fw-bolder {
+  font-weight: 700 !important;
+}
+.text-dark-gray {
+  color: $dark-gray;
+}
+.text-black {
+  color: $black;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  line-height: 1.6;
+}
+
+.home-page-section-padding {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  @media screen and (min-width: $md) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  @media screen and (min-width: $lg) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+.home-page-section-padding-md {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  @media screen and (min-width: $md) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  @media screen and (min-width: $lg) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.home-page-section-padding-large {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  @media screen and (min-width: $md) {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  @media screen and (min-width: $lg) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.form-label {
+  padding-left: 12px;
+  @media screen and (max-width: $md) {
+    margin-bottom: 4px;
+  }
+}
+
+.input-wrapper {
+  padding-top: 12px;
+  padding-bottom: 18px;
+  @media screen and (min-width: $lg) {
+    padding-bottom: 20px;
+  }
+}
+
+#bigidcmp-banner-widget {
+  z-index: 1050 !important;
+}
